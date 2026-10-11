@@ -1,0 +1,6 @@
+{
+  "name": "AMASA - إدارة وحجوزات الشاليهات",
+  "description": "منصة AMASA الفاخرة لإدارة وحجوزات الشاليهات والاستراحات وربط الإدارة بالمسوقين بنظام عمولة 5% وإصدار العقود الرسمية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B0630"/>
+      <stop offset="50%" stop-color="#3B1263"/>
+      <stop offset="100%" stop-color="#120422"/>
+    </linearGradient>
+    <linearGradient id="gold512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg512)"/>
+  <rect x="8" y="8" width="496" height="496" rx="120" fill="none" stroke="url(#gold512)" stroke-width="4" stroke-opacity="0.3"/>
+  <text x="256" y="320" font-family="'Cinzel', Georgia, serif" font-size="240" font-weight="900" fill="url(#gold512)" text-anchor="middle">A</text>
+  <text x="256" y="420" font-family="'Tajawal', sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">AMASA أماسا</text>
+  <path d="M 390 130 Q 390 150 410 150 Q 390 150 390 170 Q 390 150 370 150 Q 390 150 390 130 Z" fill="url(#gold512)"/>
+</svg>

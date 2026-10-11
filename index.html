@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>AMASA | منصة إدارة وحجوزات الشاليهات الفاخرة</title>
+    <meta name="description" content="منصة AMASA الفاخرة لإدارة وحجوزات الشاليهات والاستراحات وربط الإدارة بالمسوقين بنظام عمولة 5% وإصدار عقود الإيجار المعتمدة" />
+    <meta property="og:title" content="AMASA | منصة إدارة وحجوزات الشاليهات الفاخرة" />
+    <meta property="og:description" content="منصة AMASA الفاخرة لإدارة وحجوزات الشاليهات والاستراحات وربط الإدارة بالمسوقين بنظام عمولة 5% وإصدار عقود الإيجار المعتمدة" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Mobile App PWA Meta Tags -->
+    <meta name="theme-color" content="#3B1263" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="AMASA أماسا" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="h-full bg-[#F8F6FD] font-['Tajawal',sans-serif] text-slate-800 antialiased selection:bg-purple-200 selection:text-purple-900 overscroll-none overflow-x-hidden">
+    <div id="root" class="min-h-full flex flex-col"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Service Worker Registration for Mobile PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

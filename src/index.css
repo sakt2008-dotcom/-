@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+  body {
+    font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+    background-color: #F8F5FC;
+    color: #1F2937;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Mobile-first touch & safe-area utilities */
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Smooth touch scrolling */
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Touch targets and mobile usability */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Prevent auto zoom on iOS input focus */
+@media screen and (max-width: 640px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Custom scrollbar for horizontal tabs & tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1edfa;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbbbe6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9d81d2;
+}
+
+/* Shiny Animated Mauve & Amber Buttons (طلب المستخدم: اجعل الازرار الموف تبدو لامعه متحركه لفت انتباه) */
+@keyframes shimmer-slide {
+  0% {
+    transform: translateX(-160%) skewX(-25deg);
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1;
+  }
+  60%, 100% {
+    transform: translateX(280%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-mauve {
+  0%, 100% {
+    box-shadow: 0 4px 18px -2px rgba(126, 34, 206, 0.45), 0 0 0 1px rgba(192, 132, 252, 0.35);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    box-shadow: 0 8px 30px 6px rgba(147, 51, 234, 0.7), 0 0 18px 4px rgba(216, 180, 254, 0.65), 0 0 0 3px rgba(192, 132, 252, 0.5);
+    transform: translateY(-1.5px) scale(1.015);
+  }
+}
+
+@keyframes sparkle-spin {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.3) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+.btn-mauve-shiny {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #4A1266 0%, #6B21A8 25%, #8B2FC9 50%, #A855F7 70%, #58167D 100%);
+  background-size: 200% 200%;
+  color: #ffffff;
+  animation: pulse-mauve 2.4s infinite ease-in-out;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-mauve-shiny:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 35px 8px rgba(147, 51, 234, 0.75), 0 0 20px 4px rgba(216, 180, 254, 0.7);
+}
+
+.btn-mauve-shiny:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.btn-mauve-shiny::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.15) 80%,
+    transparent 100%
+  );
+  animation: shimmer-slide 2.5s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-mauve-shiny::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes pulse-amber {
+  0%, 100% {
+    box-shadow: 0 4px 14px -2px rgba(245, 158, 11, 0.35);
+  }
+  50% {
+    box-shadow: 0 6px 22px 3px rgba(245, 158, 11, 0.55);
+  }
+}
+
+.btn-amber-shiny {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+  color: #78350F;
+  animation: pulse-amber 2.6s infinite ease-in-out;
+  transition: all 0.25s ease;
+}
+
+.btn-amber-shiny::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 100%
+  );
+  animation: shimmer-slide 2.8s infinite ease-in-out;
+  pointer-events: none;
+}

@@ -1,0 +1,35 @@
+{
+  "id": "/",
+  "name": "AMASA | منصة حجوزات الشاليهات الفاخرة",
+  "short_name": "أماسا AMASA",
+  "description": "منصة إدارة وحجوزات الشاليهات والاستراحات الفاخرة وربط الإدارة بالمسوقين وعقود الإيجار المعتمدة",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3B1263",
+  "background_color": "#F8F5FC",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["business", "travel", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
